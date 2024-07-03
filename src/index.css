@@ -1,0 +1,13 @@
+/* Criação de uma fonte pessoal */
+@font-face {
+	font-family: "batatas";
+	src: url(http://localhost:5173/public/fonts/PPSupplySans-Regular.ttf);
+}
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+img {
+	width: 100%;
+}
