@@ -1,7 +1,16 @@
-/* Criação de uma fonte pessoal */
+/* Criação de uma fonte "pessoal" */
 @font-face {
 	font-family: "batatas";
 	src: url(http://localhost:5173/public/fonts/PPSupplySans-Regular.ttf);
+}
+
+:root {
+	--t-primary: #23a6f0;
+	--t-grey: #737373;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 * {
@@ -10,4 +19,9 @@
 
 img {
 	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
