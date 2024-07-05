@@ -1,6 +1,7 @@
 // Assim importamos assets de imagem (SVG, JPEG, PNG)
 import logoSVG from '../../assets/svg/logo.svg'
 import style from './NavBar.module.css'
+
 import { Icon } from '@iconify/react';
 
 //1 - Criar uma função
@@ -29,7 +30,7 @@ function NavBar() {
                 <div className={style.utilityMenu}>
                     <ul>
                         <li className={style.loginLinks}><a className={style.linksWithIcons} href="#login">
-                            <Icon icon="mdi:user-outline" height={24} /> Login</a>
+                            <Icon icon="mdi:user-outline" height="2.4rem" /> Login</a>
                         </li>
                         <li><a href="#register">Register</a></li>
                         <li><a className={style.linksWithIcons} href="">Search</a></li>

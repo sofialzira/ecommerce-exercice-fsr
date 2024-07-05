@@ -7,9 +7,11 @@
 :root {
 	--t-primary: #23a6f0;
 	--t-grey: #737373;
+	--black: #000;
 }
 
 html {
+	font-size: 16px;
 	font-size: 62.5%;
 }
 

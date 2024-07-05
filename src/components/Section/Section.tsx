@@ -9,7 +9,7 @@ function Section(props) {
     const sectionCss = styles.section;
 
     return (
-        <section className={`${sectionCss} ${fullwidth ? 'fullwidth' : ""}`}>
+        <section className={`${sectionCss}`}>
             {children}
         </section>
     )
