@@ -1,0 +1,5 @@
+.sliderWrapper {
+	width: 100%;
+	height: calc(100vh - 13.6rem);
+	background-color: var(--t-primary);
+}

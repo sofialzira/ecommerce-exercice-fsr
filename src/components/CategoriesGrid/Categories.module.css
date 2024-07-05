@@ -1,0 +1,32 @@
+.categoriesGrid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+	grid-template-areas:
+		"one one two three"
+		"one one two four";
+	width: 100%;
+	height: 300px;
+	gap: 20px;
+}
+
+.categoriesGrid div {
+	width: 100%;
+	height: 100%;
+}
+
+.categoriesGrid div:first-child {
+	grid-area: one;
+}
+
+.categoriesGrid div:nth-child(2) {
+	grid-area: two;
+}
+
+.categoriesGrid div:nth-child(3) {
+	grid-area: three;
+}
+
+.categoriesGrid div:nth-child(4) {
+	grid-area: four;
+}
