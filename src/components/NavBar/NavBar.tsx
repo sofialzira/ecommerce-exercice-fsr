@@ -7,8 +7,6 @@ import { Icon } from '@iconify/react';
 //1 - Criar uma função
 function NavBar() {
 
-    console.log(style)
-
     //2 - Obrigatorio ter um return
     return (
         <div className={style['main-header']}>
