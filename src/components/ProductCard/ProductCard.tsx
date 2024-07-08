@@ -1,16 +1,32 @@
 import styles from './ProductCard.module.css'
 import productImg from '../../assets/products/product-cover-1.png'
 
-function ProductCard() {
+type ProductCardType = {
+    productName: string;
+    image: string;
+    description: string;
+    oldPrice: number;
+    currentPrice: number;
+    variantColor: Array<string> // string[]
+}
+
+function ProductCard(props: ProductCardType) {
+
+    const { productName,
+        image,
+        description,
+        oldPrice,
+        currentPrice,
+        variantColor } = props
     return (
         <div className={styles.productCard}>
-            <img src={productImg} alt="product name" />
+            <img src={image} alt="product name" />
             <div className={styles.info}>
-                <h3 className={styles.name}>Graphic Design</h3>
-                <p className={styles.description}>English Department</p>
+                <h3 className={styles.name}>{productName}</h3>
+                <p className={styles.description}>{description}</p>
                 <div className={styles.price}>
-                    <span className={styles.oldPrice}>16.48€</span>
-                    <span className={styles.currentPrice}>6.48€</span>
+                    <span className={styles.oldPrice}>{oldPrice}€</span>
+                    <span className={styles.currentPrice}>{currentPrice}€</span>
                 </div>
                 <div className={styles.colors}>
                     <span style={{ backgroundColor: "#23A6F0" }}></span>

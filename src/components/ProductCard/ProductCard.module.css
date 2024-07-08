@@ -1,6 +1,7 @@
 .productCard {
 	width: 100%;
 	text-align: center;
+	line-height: 2.4rem;
 }
 
 .productCard img {
@@ -32,6 +33,7 @@
 }
 
 .oldPrice {
+	text-decoration: line-through;
 	color: var(--t-muted);
 }
 

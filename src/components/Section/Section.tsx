@@ -1,15 +1,17 @@
 import styles from './Section.module.css'
 
+type SectionPropsType = {
+    children: React.ReactNode,
+    fullwidth?: boolean | number
+}
+
 // Componente 
-function Section(props) {
+function Section(props: SectionPropsType) {
 
     const { children, fullwidth = false } = props;
 
-
-    const sectionCss = styles.section;
-
     return (
-        <section className={`${sectionCss}`}>
+        <section className={`${styles.section} ${fullwidth ? styles.fullwidth : ''}`}>
             {children}
         </section>
     )
