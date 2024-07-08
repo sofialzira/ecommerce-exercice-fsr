@@ -7,7 +7,7 @@ type ProductCardType = {
     description: string;
     oldPrice: number;
     currentPrice: number;
-    variantColor: Array<string> // string[]
+    variantColors: Array<string> // string[]
 }
 
 function ProductCard(props: ProductCardType) {
@@ -17,7 +17,8 @@ function ProductCard(props: ProductCardType) {
         description,
         oldPrice,
         currentPrice,
-        variantColor } = props
+        variantColors } = props
+
     return (
         <div className={styles.productCard}>
             <img src={image} alt="product name" />
@@ -29,10 +30,16 @@ function ProductCard(props: ProductCardType) {
                     <span className={styles.currentPrice}>{currentPrice}€</span>
                 </div>
                 <div className={styles.colors}>
-                    <span style={{ backgroundColor: "#23A6F0" }}></span>
-                    <span style={{ backgroundColor: "#23856D" }}></span>
-                    <span style={{ backgroundColor: "#E77C40" }}></span>
-                    <span style={{ backgroundColor: "#252B42" }}></span>
+                    {
+                        //Expressoes .map??? 
+                        variantColors.map((color) => {
+                            return <span style={{ backgroundColor: color }}></span>
+                        })
+                    }
+
+
+
+
                 </div>
             </div>
         </div>
