@@ -31,7 +31,7 @@ function ProductListCard() {
                 <button>Add to cart</button>
             </div>
 
-        </div>
+        </div> 
     )
 }
 

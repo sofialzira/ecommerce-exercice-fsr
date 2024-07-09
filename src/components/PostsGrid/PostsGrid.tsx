@@ -19,7 +19,7 @@ const post = {
 
 const posts = [
     {
-        "postImage": "https://example.com/image1.jpg",
+        "postImage": "/src/assets/posts/unsplash_dEGu-oCuB1Y.png",
         "categories": [
             "Google",
             "Trending",
@@ -32,7 +32,7 @@ const posts = [
         "link": "/blog/link1"
     },
     {
-        "postImage": "https://example.com/image2.jpg",
+        "postImage": "/src/assets/posts/unsplash_hHdHCfAifHU.png",
         "categories": [
             "Tech",
             "Innovation",
@@ -45,7 +45,7 @@ const posts = [
         "link": "/blog/link2"
     },
     {
-        "postImage": "https://example.com/image3.jpg",
+        "postImage": "src/assets/posts/unsplash_tVEqStC2uz8.png",
         "categories": [
             "Health",
             "Wellness",
@@ -62,8 +62,26 @@ const posts = [
 function PostsGrid() {
     return (
         <div className={styles.postGrid}>
-            <PostsCard />
-        </div>
+            {
+                posts.map((post) => {
+                    return (
+                        <PostsCard 
+                        postImage={post.postImage}
+                        categories={post.categories}
+                        title={post.title}
+                        summary={post.summary}
+                        numberOfComents={post.comments}
+                        link={post.link}
+                        publishDate={post.postDate}
+
+                        
+
+                        />
+                    )
+                })
+            }
+
+        </div> 
     )
 }
 

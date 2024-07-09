@@ -1,5 +1,5 @@
 import styles from './ProductCard.module.css'
-import productImg from '../../assets/products/product-cover-1.png'
+//import productImg from '../../assets/products/product-cover-1.png'
 
 type ProductCardType = {
     productName: string;
@@ -36,7 +36,7 @@ function ProductCard(props: ProductCardType) {
                             return <span style={{ backgroundColor: color }}></span>
                         })
                     }
-
+ 
 
 
 
