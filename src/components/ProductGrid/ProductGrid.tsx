@@ -1,6 +1,8 @@
+import { Icon } from '@iconify/react/dist/iconify.js'
 import ProductCard from './ProductCard/ProductCard'
 import styles from './ProductGrid.module.css'
-
+import React, { useState } from "react"
+import ProductListCard from './ProductListCard/ProductListCard'
 
 // const product = {
 //     "productImg": "/src/assets/products/product-cover-1.png",
@@ -123,28 +125,51 @@ const products = [
     }
 ]
 
+//  
 
 function ProductGrid() {
 
-    return (
-        <div className={styles.wrapper}>
-            {
-                products.map((product) => {
-                    return (
-                        <ProductCard
-                            productName={product.name}
-                            image={product.productImg}
-                            description={product.description}
-                            oldPrice={product.oldPrice}
-                            currentPrice={product.currentPrice}
-                            variantColors={product.colors}
-                        />
-                    )
-                })
-            }
+    const [isList, setIsList] = useState(true);
 
-        </div>
+
+    return (
+        <>
+            <div className={styles.listStyle}>
+                <Icon onClick={() => {
+                    setIsList(false)
+                }} className={styles.muted} icon="mingcute:grid-fill" height="2.4rem" />
+                <Icon onClick={() => {
+                    setIsList(true)
+                }} className={styles.muted} icon="mingcute:list-check-line" height="2.4rem" />
+            </div>
+            <div className={styles.wrapper_list}>
+                {
+                    products.map((product) => {
+                        return isList ? (<ProductListCard />) : (
+                            <ProductCard
+                                productName={product.name}
+                                image={product.productImg}
+                                description={product.description}
+                                oldPrice={product.oldPrice}
+                                currentPrice={product.currentPrice}
+                                variantColors={product.colors}
+                            />
+                        )
+                    })
+                }
+
+            </div>
+        </>
     )
 }
+
+// // React.createElement("div", {}, [
+// //     React.createElement(),
+// //     React.createElement()
+// //     React.createElement()
+// //     React.createElement()
+// //     React.createElement()
+
+// ])
 
 export default ProductGrid

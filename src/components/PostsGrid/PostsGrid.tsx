@@ -74,8 +74,6 @@ function PostsGrid() {
                         link={post.link}
                         publishDate={post.postDate}
 
-                        
-
                         />
                     )
                 })
